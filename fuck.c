@@ -1,3 +1,5 @@
+//2024.4.17
+//luogu P1047
 #include <stdio.h>
 int main(void) {
 	int road_lenth = 0;
