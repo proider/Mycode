@@ -1,3 +1,5 @@
+//2024.4.21
+//luogu P1085
 #include <stdio.h>
 
 typedef struct {
