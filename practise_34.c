@@ -1,3 +1,5 @@
+//2024.4.22
+//第一次C语言实现插入排序
 #include <stdio.h>
 
 int main(void) {
