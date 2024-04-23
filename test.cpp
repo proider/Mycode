@@ -1,3 +1,5 @@
+//2024.4.23
+//luogu P1150
 #include <stdio.h>
 int main(void) {
 	int cigarette_number = 0;
