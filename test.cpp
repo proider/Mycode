@@ -1,24 +1,35 @@
-//2024.4.23
-//luogu P1150
 #include <stdio.h>
+#include <string.h>
 int main(void) {
-	int cigarette_number = 0;
-	int agiotage_number = 0;
-	int total_cigarette = 0;
-	int count = 0;
-		scanf_s("%d %d", &cigarette_number, &agiotage_number);
-		
-		if (cigarette_number < agiotage_number||agiotage_number==1|| agiotage_number==0) {
-			printf("%d", total_cigarette);
-			return 0;
+	int k;
+	scanf_s("%d", &k);
+	int x = 100;
+	int l = 0;
+	int m = 0;
+	int key = 1;
+	for (int i = 10000; i <= 30000; ++i) {
+		 
+		if (m == 1000) {
+			m = 0;
 		}
-		while (cigarette_number >= agiotage_number) {
-			total_cigarette+= agiotage_number;
-			cigarette_number = cigarette_number-agiotage_number+1;
-			count++;
+		if (i % 10 == 0 && i != 10000) {
+			++l;
 		}
-		total_cigarette += cigarette_number;
+		if (l == 1000) {
+			l = 0;
+		}
+		if (i % 100 == 0 && i != 10000) {
+			++x;
+		}
+		if ((m % k == 0) && (l % k== 0 )&& (x % k == 0)) {
+			printf("%d\n", i);
+			key = 0;
+		}
+		++m;
+	}
+	if (key) {
+		printf("No");
+	}
 
-		printf("%d", total_cigarette);
 	return 0;
 }
