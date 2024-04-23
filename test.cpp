@@ -1,3 +1,5 @@
+//2024.4.23
+//luogu P1151
 #include <stdio.h>
 #include <string.h>
 int main(void) {
